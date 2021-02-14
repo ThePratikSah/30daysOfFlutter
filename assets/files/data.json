@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Pratik Sah",
+            "desc": "Javascript Developer",
+            "price": 999,
+            "color": "#e1e1e1",
+            "image": "https://avatars.githubusercontent.com/u/25739004?s=460&v=4"
+        },
+        {
+            "id": 2,
+            "name": "Pratik Sah",
+            "desc": "Javascript Developer",
+            "price": 999,
+            "color": "#e1e1e1",
+            "image": "https://avatars.githubusercontent.com/u/25739004?s=460&v=4"
+        },
+        {
+            "id": 3,
+            "name": "Pratik Sah",
+            "desc": "Javascript Developer",
+            "price": 999,
+            "color": "#e1e1e1",
+            "image": "https://avatars.githubusercontent.com/u/25739004?s=460&v=4"
+        },
+        {
+            "id": 4,
+            "name": "Pratik Sah",
+            "desc": "Javascript Developer",
+            "price": 999,
+            "color": "#e1e1e1",
+            "image": "https://avatars.githubusercontent.com/u/25739004?s=460&v=4"
+        },
+        {
+            "id": 5,
+            "name": "Pratik Sah",
+            "desc": "Javascript Developer",
+            "price": 999,
+            "color": "#e1e1e1",
+            "image": "https://avatars.githubusercontent.com/u/25739004?s=460&v=4"
+        }
+    ]
+}
