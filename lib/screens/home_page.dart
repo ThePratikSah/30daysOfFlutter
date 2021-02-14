@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 import 'package:learning/models/catelog.dart';
 import 'package:learning/widgets/drawer.dart';
 import 'package:learning/widgets/item_widget.dart';
@@ -16,8 +18,11 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-  loadData() {
-    
+  loadData() async {
+    var dataJson = await rootBundle.loadString("assets/files/data.json");
+    var decodedData = jsonDecode(dataJson);
+    var productsData = decodedData["products"];
+    print(productsData);
   }
 
   @override
