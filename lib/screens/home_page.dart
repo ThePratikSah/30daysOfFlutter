@@ -22,23 +22,30 @@ class _HomePageState extends State<HomePage> {
     var dataJson = await rootBundle.loadString("assets/files/data.json");
     var decodedData = jsonDecode(dataJson);
     var productsData = decodedData["products"];
-    print(productsData);
+    CatelogModel.items = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(30, (index) => CatelogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Developer List"),
       ),
-      body: ListView.builder(
-        itemCount: dummyList.length,
-        itemBuilder: (context, index) {
-          return ItemWidget(
-            item: dummyList[index],
-          );
-        },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: (CatelogModel.items != null && CatelogModel.items.isNotEmpty)
+            ? ListView.builder(
+                itemCount: CatelogModel.items.length,
+                itemBuilder: (context, index) => ItemWidget(
+                  item: CatelogModel.items[index],
+                ),
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
       drawer: MyDrawer(),
     );
